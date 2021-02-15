@@ -1,0 +1,33 @@
+//DECLARATION
+DECLARE Str1, Alphabets : STRING
+DECLARE Char1 : CHAR
+DECLARE i : INTEGER
+DECLARE Check : BOOLEAN
+
+//INITIALISATION
+Str1 ← ""
+Alphabets ← ""
+Char1 ← ''
+i ← 0
+Check ← TRUE
+
+//INPUT
+OUTPUT "Enter String: "
+INPUT Str1
+Str1 ← UPPER(Str1)
+
+//PROCESS
+FOR i ← 1 TO LEN(Alphabets)
+   Char1 ← MID(Str1, i, 1)
+   IF LOCATE(Str1, Char1) = 0 THEN
+      Check ← FALSE
+   END IF
+NEXT i
+
+//OUTPUT
+IF Check ← TRUE THEN
+   OUTPUT "All Alphabets Are Present"
+ELSE 
+   OUTPUT "All Alphabets Are Not Present"
+END IF 
+  

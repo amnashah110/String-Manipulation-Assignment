@@ -1,0 +1,33 @@
+//DECLARATION
+DECLARE Str1, Str2 : STRING
+DECLARE Char1, Char2, Char3 : CHAR
+DECLARE i : INTEGER
+
+//INITIALISATION
+Str1 ← ""
+Str2 ← "" 
+Char1 ← ''
+Char2 ← ''
+Char3 ← ''
+i ← 0
+
+//INPUT
+OUTPUT "Enter String: "
+INPUT Str1 
+OUTPUT "Enter Character To Be Replaced: "
+INPUT Char1
+OUTPUT "Enter Character To Replace Selected Character: "
+INPUT Char2
+
+//PROCESS
+FOR i ← 1 TO LEN(Str1)
+   Char3 ← MID(Str1, i, 1)
+   IF Char3 = Char THEN
+      Str2 ← Str2 + Char2
+   ELSE
+      Str2 ← Str2 + Char3
+   END IF
+NEXT i
+
+//OUTPUT
+OUTPUT "New String: " + Str2
