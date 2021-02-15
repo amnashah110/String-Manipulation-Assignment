@@ -1,0 +1,36 @@
+//DECLARATION
+DECLARE Str1 : STRING
+DECLARE Count1, Count2, Count3, i : INTEGER
+DECLARE Char1, Char2 : CHAR
+
+//INITIALISATION
+Str1 ← ""
+Count1 ← 0
+Count2 ← 0
+Count3 ← 0
+i ← 0
+Char1 = ''
+
+'INPUT
+OUTPUT "Enter String: ", Str1
+Str1 ← UPPER(Str1)
+
+'PROCESS
+FOR i ← 1 TO LEN(Str1)
+    Char1 ← MID(Str1, i, 1)
+    IF Char1 >= "A" And Char1 <= "Z" THEN
+        Count1 ← Count1 + 1
+    ELSE IF Char1 >= "0" And Char1 <= "9" THEN
+        Count2 ← Count2 + 1 
+    ELSE
+        Count3 ← Count3 + 1 
+    END IF
+NEXT
+
+//OUTPUT
+OUTPUT "Number Of Alphabets: " + Count1
+OUTPUT "Number Of Digits: " + Count2 
+OUTPUT "Number Of Other Characters: " + Count3
+
+
+
