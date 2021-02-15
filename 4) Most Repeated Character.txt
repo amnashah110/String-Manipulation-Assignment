@@ -1,0 +1,39 @@
+//DECLARATION
+DECLARE Str1 : STRING
+DECLARE Char1, Char2, Char3 : CHAR
+DECLARE i, j, NumOfChar, CharCount : INTEGER
+
+//INITIALISATION
+Str1 ← ""
+Char1 ← ""
+Char2 ← ""
+Char3 ← ""
+i ← 0
+j ← 0
+NumOfChar ← 0
+CharCount ← 0
+
+//INPUT
+OUTPUT "Enter String: ", Str1
+
+//PROCESS
+FOR i ← 1 TO LEN(Str1)
+    Char1 ← MID(Str1, i, 1)
+    FOR j ← 1 TO LEN(Str1)
+        Char2 ← MID(Str1, j, 1)
+        IF Char2 = Char1 THEN
+            NumOfChar = NumOfChar + 1 
+        END IF
+    NEXT j
+    IF NumOfChar > CharCount THEN
+        Char3 ← Char1 
+        CharCount ← NumOfChar
+    END IF
+    NumOfChar = 0
+NEXT i
+
+//OUTPUT
+OUTPUT "Most Repeated Character: " + Char3
+
+
+

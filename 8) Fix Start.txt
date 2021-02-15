@@ -1,0 +1,33 @@
+//DELCARATION
+DECLARE Str1, Str2, Str3 : STRING
+DECLARE Char1, Char2, Char3 : CHAR
+DECLARE i : INTEGER
+
+//INITIALISATION
+Str1 ← ""
+Str2 ← ""
+Str3 ← ""
+Char1 ← ""
+Char2 ← ""
+Char3 ← "*"
+i ← 0
+
+//INPUT 
+OUTPUT "Input String: ", Str1
+Str1 ← UPPER(Str1)
+
+//PROCESS
+Char1 ← MID(Str1, 1, 1)
+Str2 ← RIGHT(Str1, LEN(Str1) - 1)
+FOR i ← 1 To LEN(Str2)
+    Char2 ← MID(Str2, i, 1)
+    IF Char2 = Char1 Then
+         Str3 ← Str3 + Char3
+    ELSE
+         Str3 ← Str3 + Char2
+    END IF
+NEXT i
+Str3 ← LOWER(Str3)
+
+//OUTPUT
+OUTPUT "New String: " + Char1 + Str3

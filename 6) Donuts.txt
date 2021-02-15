@@ -1,0 +1,15 @@
+//DECLARATION
+DECLARE Donuts : INTEGER
+
+//INITIALISATION
+Donuts ← 0
+
+//INPUT
+OUTPUT "Input Number Of Donuts: ", Donuts
+
+//PROCESS
+IF Donuts >= 0 AND DONUTS < 10 THEN
+    OUTPUT "Number Of Donuts: " & Donuts
+ELSE
+    OUTPUT "Number Of Donuts: " & "Many"
+END IF

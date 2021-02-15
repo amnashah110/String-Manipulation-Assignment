@@ -1,0 +1,25 @@
+//DECLARATION
+DECLARE Str1, Str2, Str3 : STRING
+DECLARE Char1, Char2 : CHAR
+
+//INITIALISATION
+Str1 ← ""
+Str2 ← ""
+Str3 ← ""
+Char1 ← '' 
+Char2 ← ''
+
+//INPUT
+OUTPUT "Enter String: ", Str1
+
+//PROCESS
+IF LEN(Str1) >= 2 THEN
+    Str2 ← LEFT(Str1, 2)
+    Str3 ← RIGHT(Str1, 2)
+ELSE IF LEN(Str1) < 2 THEN
+    Str2 ← LEFT(Str1, 1)
+    Str3 = " "
+END IF
+
+//OUTPUT
+OUTPUT "New String: " + Str2 + Str3

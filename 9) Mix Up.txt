@@ -1,0 +1,23 @@
+//DECLARATION
+DECLARE Str1, Str2, Str3, Str4, Str5, Str6 : STRING
+
+//INITIALISATION
+Str1 ← ""
+Str2 ← ""
+Str3 ← ""
+Str4 ← ""
+Str5 ← ""
+Str6 ← ""
+
+//INPUT
+OUTPUT "Enter First String: ", Str1
+OUTPUT "Enter Second String: ", Str2
+
+//PROCESS
+Str3 ← LEFT(Str1, 2)
+Str4 ← LEFT (Str2, 2)
+Str5 ← RIGHT(Str1, LEN(Str1) - LEN(Str3))
+Str6 ← RIGHT(Str2, LEN(Str2) - LEN(Str4))
+
+//OUTPUT
+OUTPUT "New String: " + Str4 + Str5 + ' ' + Str6 

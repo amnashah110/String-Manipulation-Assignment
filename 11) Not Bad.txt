@@ -1,0 +1,25 @@
+//DECLARATION
+DECLARE Str1, Str2, Str3 : STRING
+DECLARE NotPos, BadPos : INTEGER
+
+//INITIALISATION
+Str1 ← ""
+Str2 ← ""
+Str3 ← ""
+NotPos ← 0
+BadPos ← 0
+
+//INPUT
+OUTPUT "Enter String: ", Str1
+
+//PROCESS AND OUTPUT
+IF LOCATE(Str1, "not") > 0 AND LOCATE(Str1, "bad") > 0 THEN
+    NotPos ← LOCATE(Str1, "not")
+    BadPos ← LOCATE(Str1, "bad")
+    IF NotPos < BadPos THEN
+        Str2 ← LEFT(Str1, NotPos - 1)
+        OUTPUT "New String: " + Str2 + "good!"
+    END IF
+ELSE
+    OUTPUT "New String: " + Str1
+END IF

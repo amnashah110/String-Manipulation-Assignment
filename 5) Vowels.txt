@@ -1,0 +1,42 @@
+//DECLARATION
+DECLARE Str1 : STRING
+DECLARE CountA, CountE, CountI, CountO, CountU : INTEGER
+DECLARE Char1 : CHAR 
+DECLARE i : INTEGER
+
+//INITIALISATION
+Str1 ← ""
+CountA ← 0
+CountE ← 0
+CountI ← 0
+CountO ← 0
+CountU ← 0
+Char1 ← ''
+i ← 0
+
+//INPUT
+OUTPUT "Enter String: ", Str1
+Str1 ← UPPER(Str1)
+
+//PROCESS
+FOR i ← 1 To LEN(Str1)
+    Char1 ← MID(Str1, i, 1)
+    IF Char1 = "A" THEN
+        CountA ← CountA + 1
+    ELSE IF Char1 = "E" THEN
+        CountE ← CountE + 1
+    ELSE IF Char1 = "I" THEN
+        CountI ← CountI + 1
+    ELSE IF Char1 = "O" THEN
+        CountO ← CountO + 1
+    ELSE IF Char1 = "U" THEN
+        CountU ← CountU + 1
+    END IF
+NEXT i
+
+//OUTPUT
+OUTPUT "Count of A: " + CountA
+OUTPUT "Count of E: " + CountE
+OUTPUT "Count of I: " + CountI
+OUTPUT "Count of O: " + CountO
+OUTPUT "Count of U: " + CountU
